@@ -1,23 +1,29 @@
-import logo from './logo.svg';
+
 import './App.css';
+
+import {productsData} from './constants/constants'
+
+function addCart(produto) {
+ 
+  console.log(produto)
+}
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {productsData.map((p)=>{
+        return(
+          <div key={p.id}>
+            <img src={p.img} alt={p.name}/>
+            <p>{p.name}</p>
+            <h2>R$ {p.price.toFixed(2)}</h2>
+            <button onClick={()=> addCart(p)}>Adiconar ao carrinho</button>
+          </div>
+        )
+      })}
+
+      
+
     </div>
   );
 }
