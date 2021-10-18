@@ -19,14 +19,14 @@ React Router
 - [x] Layout Figma 
 - [x] Lista de produtos 
 - [x] Configuração básica das rotas 
-- [ ] Page Home
-- [ ] Componente Header
+- [x] Page Home
+- [x] Componente Header
 - [ ] Componente Footer
 - [ ] Componente cards produto
 - [ ] Page Produto
 - [ ] Funcionalidade add carrinho/ remove
 - [ ] Funcionalidade alterar quantidade
-- [ ] Funcionalidade contador carrinho
+- [x] Funcionalidade contador carrinho
 - [ ] Page Carrinho
 
 <br>
