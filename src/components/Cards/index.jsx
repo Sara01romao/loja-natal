@@ -2,6 +2,7 @@
 import { useContext } from 'react'
 import {productsData} from '../../constants/constants'
 import { CartContext } from '../../contexts/cart'
+import { Card, DivCards } from './styled';
 
 
 export default function Cards(){
@@ -12,30 +13,38 @@ export default function Cards(){
        setCount(count+1)
 
 
-       let temCart= myCart.find((p) =>(p.id==produto.id))
-        if(!temCart){
+       const inCart= myCart.find((p) =>(p.id===produto.id))
+        if(!inCart){
+            produto.qtd=1
             myCart.push(produto)
-        }else{
             
+        }else{      
+            produto.qtd++
         }
+        
        setMyCart(myCart)
-        console.log(myCart)
+       console.log(myCart)
     }
 
     
   
     return(
-        <div>
+        <DivCards>
              {productsData.map((p)=>{
                 return(
-                <div className="card" key={p.id}>
+                <Card key={p.id}>
                     <img src={p.img} alt={p.name}/>
-                    <p>{p.name}</p>
-                    <h2>R$ {p.price.toFixed(2)}</h2>
-                    <button onClick={()=> addCart(p)}>Adiconar ao carrinho</button>
-                </div>
+                  
+                    <div className="txtCard">
+                        <p>{p.name}</p>
+                        <small>{p.type}</small>
+                        <h3>R$ {p.price.toFixed(2)} </h3>
+                    </div>
+                    
+                    <button onClick={()=> addCart(p)}>{p.qtd} Adicionar ao carrinho</button>
+                </Card>
                 )
             })}
-        </div>
+        </DivCards>
     )
 }
