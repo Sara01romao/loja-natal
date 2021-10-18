@@ -1,16 +1,19 @@
 import Routes from './routes';
 import './App.css';
+import CartProvider from './contexts/cart';
 
 
 
 function App() {
   return (
-    <div className="App">
-     
-    <Routes/>
+    <CartProvider>
+      <div className="App">
       
+      <Routes/>
+        
 
-    </div>
+      </div>
+    </CartProvider>
   );
 }
 
