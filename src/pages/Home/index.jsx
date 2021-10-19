@@ -1,12 +1,13 @@
 
 import Cards from '../../components/Cards'
+import { HomeSection } from './styles'
 
 
 export default function Home(){
     return(
-        <div>
-            home
+        <HomeSection>
+            < img  class="imgNatal" src="/img/imgHome.png" alt="" />
             <Cards/>
-        </div>
+        </HomeSection>
     )
 }
