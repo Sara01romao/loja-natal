@@ -32,6 +32,12 @@ React Router
 <br>
 <br>
  
+  <h6 align="center">   view</h6>
+
+
+<p align="center">
+  <img max-width="auto" height="auto"  src="https://user-images.githubusercontent.com/46323667/138488843-f02e681d-b69a-43a7-8731-f2937431bed2.png">
+</p>
 
 
 
