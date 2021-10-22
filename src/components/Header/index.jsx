@@ -5,8 +5,8 @@ import { CartContext } from "../../contexts/cart";
 import { useContext } from "react";
 
  export default function Header(){
-    const {count} = useContext(CartContext)
-
+    const {count} = useContext(CartContext);
+    const {total} = useContext(CartContext);
      return(
          <div>
                 <DivHeader>
@@ -20,7 +20,7 @@ import { useContext } from "react";
                                         <MdShoppingCart/>
                                         <p>{count}</p>
                                     </div>
-                                    R$ 00,00
+                                    R$  {total.toFixed(2)}
                                 </Link>
                             </li>
                         </ul>

@@ -8,12 +8,18 @@ import { Card, DivCards } from './styled';
 export default function Cards(){
     const {count, setCount} = useContext(CartContext);
     const {myCart, setMyCart} = useContext(CartContext);
+    let {total, setTotal} = useContext(CartContext);
 
     function addCart(produto) {
-       setCount(count+1)
+        calcCount();
+        calcTotal(produto);
+        pushCart(produto)
+       
+      
+    }
 
-
-       const inCart= myCart.find((p) =>(p.id===produto.id))
+    function pushCart(produto){
+        const inCart= myCart.find((p) =>(p.id===produto.id))
         if(!inCart){
             produto.qtd=1
             myCart.push(produto)
@@ -23,9 +29,18 @@ export default function Cards(){
         }
         
        setMyCart(myCart)
-       console.log(myCart)
     }
-
+   
+    function calcTotal(produto){
+        total += produto.price
+        
+        setTotal(total)
+    }
+      
+    function calcCount(){
+        setCount(count+1)
+    }
+     
     
   
     return(
