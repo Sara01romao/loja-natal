@@ -15,7 +15,7 @@ import { useContext } from "react";
                         <ul>
                             <li><Link to=""><MdAccountCircle/>Minha Conta</Link></li>
                             <li>
-                                <Link to="" >
+                                <Link to="/cart" >
                                     <div className="count">
                                         <MdShoppingCart/>
                                         <p>{count}</p>
