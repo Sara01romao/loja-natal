@@ -12,8 +12,8 @@ export default function Cards(){
 
     function addCart(produto) {
         calcCount();
-        calcTotal(produto);
-        pushCart(produto)
+        pushCart(produto);
+        calcTotal();
        
       
     }
@@ -21,18 +21,23 @@ export default function Cards(){
     function pushCart(produto){
         const inCart= myCart.find((p) =>(p.id===produto.id))
         if(!inCart){
-            produto.qtd=1
+            produto.qtd= 1
             myCart.push(produto)
             
         }else{      
             produto.qtd++
         }
+
+       produto.totalItem= produto.qtd * produto.price;
         
        setMyCart(myCart)
+       console.log(myCart)
     }
    
-    function calcTotal(produto){
-        total += produto.price
+    function calcTotal(){
+        total = myCart.reduce((acumulador, item) =>{
+            return acumulador += item.totalItem
+        },0)
         
         setTotal(total)
     }
