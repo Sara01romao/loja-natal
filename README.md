@@ -24,10 +24,10 @@ React Router
 - [ ] Componente Footer
 - [ ] Componente cards produto
 - [ ] Page Produto
-- [ ] Funcionalidade add carrinho/ remove
-- [ ] Funcionalidade alterar quantidade
+- [x] Funcionalidade add carrinho/ remove
+- [x] Funcionalidade alterar quantidade
 - [x] Funcionalidade contador carrinho
-- [ ] Page Carrinho
+- [x] Page Carrinho
 
 <br>
 <br>
