@@ -4,7 +4,64 @@ import { CartContext } from "../../contexts/cart";
 import { ItemCart } from "./styled";
 
 export default function ListCart(){
-    const {myCart} = useContext(CartContext)
+    let {count, setCount} = useContext(CartContext);
+    let {myCart, setMyCart} = useContext(CartContext);
+    let {total, setTotal} = useContext(CartContext);
+
+    function add(produto){
+        produto.qtd++
+        produto.totalItem= produto.qtd * produto.price;
+        
+        setMyCart(myCart);
+        calcTotal();
+        calcCount();
+        
+    }
+
+    function removeQtd(produto){
+        
+        if(produto.qtd>1){
+            produto.qtd--;
+            produto.totalItem= produto.qtd * produto.price;
+        }
+        setMyCart(myCart);
+        calcTotal();
+        calcCount();
+    }
+
+
+    function calcTotal(){
+        total = myCart.reduce((acumulador, item) =>{
+            return acumulador += item.totalItem
+        },0)
+        
+        setTotal(total)
+    }
+
+
+    function calcCount() {
+        count = myCart.reduce((acc, item) =>{
+            return acc +=item.qtd
+        }, 0);
+    
+        setCount(count);
+    }
+
+    function remove(produto){
+        let newlist = myCart.filter((p) =>{
+            return (p.id !== produto.id)
+        })
+
+        myCart = newlist
+
+        setMyCart(myCart)
+        calcTotal();
+        calcCount();
+    
+        console.log(newlist);
+    }
+     
+
     return(
         <div>
              {myCart.map((p)=>{
@@ -18,12 +75,12 @@ export default function ListCart(){
                             </div>
 
                             <div className="qtdItem">
-                                <button>-</button>
+                                <button onClick={() => removeQtd(p)}>-</button>
                                 <p>{p.qtd}</p>
-                                <button>+</button>
+                                <button onClick={() => add(p)}>+</button>
                             </div>
 
-                            <button>Remover</button>
+                            <button onClick={() =>remove(p)}>Remover</button>
 
                         </ItemCart>
                     )
