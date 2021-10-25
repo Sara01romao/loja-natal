@@ -1,6 +1,6 @@
 
 ## 💻  Sobre o Projeto
-Projeto como tema um catálogo de compra de produtos natalinos, sendo usado Context Api nas funcionalidades do carrinho de compra. Dessa forma ficou mais simples as alteração dos estados em comuns entre os componentes.
+Projeto tem como tema um catálogo de compra de produtos natalinos, sendo usado Context Api nas funcionalidades do carrinho de compra. Dessa forma ficou mais simples as alteração dos estados em comuns entre os componentes.
 
   
 <br>
