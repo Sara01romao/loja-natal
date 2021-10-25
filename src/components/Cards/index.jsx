@@ -1,27 +1,26 @@
 
 import { useContext } from 'react'
-import {productsData} from '../../constants/constants'
+import { productsData } from '../../constants/constants'
 import { CartContext } from '../../contexts/cart'
 import { Card, DivCards } from './styled';
 
 
 export default function Cards(){
-    const {count, setCount} = useContext(CartContext);
-    const {myCart, setMyCart} = useContext(CartContext);
+    let {count, setCount} = useContext(CartContext);
+    let {myCart, setMyCart} = useContext(CartContext);
     let {total, setTotal} = useContext(CartContext);
 
     function addCart(produto) {
-        calcCount();
         pushCart(produto);
         calcTotal();
-       
+        calcCount();
       
     }
 
     function pushCart(produto){
         const inCart= myCart.find((p) =>(p.id===produto.id))
         if(!inCart){
-            produto.qtd= 1
+            produto.qtd=1
             myCart.push(produto)
             
         }else{      
@@ -31,7 +30,7 @@ export default function Cards(){
        produto.totalItem= produto.qtd * produto.price;
         
        setMyCart(myCart)
-       console.log(myCart)
+       
     }
    
     function calcTotal(){
@@ -42,10 +41,15 @@ export default function Cards(){
         setTotal(total)
     }
       
-    function calcCount(){
-        setCount(count+1)
+   
+
+    function calcCount() {
+        count = myCart.reduce((acc, item) =>{
+            return acc+=item.qtd
+        }, 0);
+    
+        setCount(count);
     }
-     
     
   
     return(
@@ -61,7 +65,7 @@ export default function Cards(){
                         <h3>R$ {p.price.toFixed(2)} </h3>
                     </div>
                     
-                    <button onClick={()=> addCart(p)}>{p.qtd} Adicionar ao carrinho</button>
+                    <button onClick={()=> addCart(p)}> {p.qtd}Adicionar ao carrinho</button>
                 </Card>
                 )
             })}
