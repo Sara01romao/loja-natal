@@ -24,6 +24,7 @@ React Router
 - [ ] Componente Footer
 - [ ] Componente cards produto
 - [ ] Page Produto
+- [ ] Filtros de busca
 - [x] Funcionalidade add carrinho/ remove
 - [x] Funcionalidade alterar quantidade
 - [x] Funcionalidade contador carrinho
