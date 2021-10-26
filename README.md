@@ -25,10 +25,11 @@ React Router
 - [ ] Componente cards produto
 - [ ] Page Produto
 - [ ] Filtros de busca
+- [x] Page Carrinho
 - [x] Funcionalidade add carrinho/ remove
 - [x] Funcionalidade alterar quantidade
 - [x] Funcionalidade contador carrinho
-- [x] Page Carrinho
+
 
 <br>
 <br>
