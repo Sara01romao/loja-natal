@@ -10,6 +10,7 @@ export default function Cards(){
     let {myCart, setMyCart} = useContext(CartContext);
     let {total, setTotal} = useContext(CartContext);
 
+
     function addCart(produto) {
         pushCart(produto);
         calcTotal();
@@ -60,12 +61,12 @@ export default function Cards(){
                     <img src={p.img} alt={p.name}/>
                   
                     <div className="txtCard">
-                        <p>{p.name}</p>
-                        <small>{p.type}</small>
+                        <p>{p.name} <small>{p.type}</small></p>
+                        
                         <h3>R$ {p.price.toFixed(2)} </h3>
                     </div>
                     
-                    <button onClick={()=> addCart(p)}> {p.qtd}Adicionar ao carrinho</button>
+                    <button onClick={()=> addCart(p)}> Adicionar ao carrinho</button>
                 </Card>
                 )
             })}

@@ -4,7 +4,11 @@ import styled from "styled-components";
 
 export const HomeSection = styled.section`
        
-        padding: 0px 30px;
+    padding: 0px 30px;
+    
+    @media (max-width:376px){
+        padding: 0px 20px
+    }
         
     .imgNatal{
     

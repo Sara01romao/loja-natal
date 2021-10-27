@@ -10,12 +10,16 @@ export const DivCards = styled.div`
     align-items: center;
     padding:0px 10px;
     /* border: 1px solid red; */
+
+    @media (max-width: 425px) {
+         justify-content: center;
+    }
 `
 
-
 export const Card= styled.div`
-    width: 250px;
-    height: 410px;
+    max-width: 390px;
+    width: 100%;
+    height: 420px;
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -23,14 +27,19 @@ export const Card= styled.div`
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
     background-color: #fff;
-    margin-bottom: 30px;
-
+    margin-bottom: 40px;
+    
+    @media (min-width: 426px) and (max-width: 768px){
+        max-width: 300px;
+    }
+  
     img{
-        border: 1px solid green;
-        width: 230px;
+       
+        width: 250px;
         padding: 20px;
         height: 230px;
         object-fit: contain;
+       
     }
 
     .txtCard{
@@ -51,10 +60,22 @@ export const Card= styled.div`
     button{
         background-color: #000;
         color: #fff;
+        border:none;
         width: 220px;
-        height: 40px;
+        height: 45px;
         font-size: 18px;
-
+        font-weight: bold;
+        transition: 0.2s;
+        cursor: pointer;
+        border-radius: 5px;
+        
     }
+
+    button:hover{
+        background-color: #DA0037;
+    }
+
+
+
 
 `
