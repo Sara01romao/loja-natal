@@ -18,7 +18,7 @@ import { useContext } from "react";
                                 <Link to="/cart" >
                                     <div className="count">
                                         <MdShoppingCart/>
-                                        <p>{count}</p>
+                                        <p style={{display: count > 0 ? 'block': 'none'}}>{count}</p>
                                     </div>
                                     R$  {total.toFixed(2)}
                                 </Link>
