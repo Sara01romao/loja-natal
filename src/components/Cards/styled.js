@@ -79,3 +79,45 @@ export const Card= styled.div`
 
 
 `
+
+
+export const NavFilter = styled.div`
+     max-width: 1220px;
+     width:100%;
+     height: 80px;
+     background: #DA0037;
+     margin-bottom:50px;
+     padding: 0px 30px;
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+
+     select{
+         width: 150px;
+         height: 40px;
+         padding: 5px;
+         font-size: 18px;
+         font-weight: bold;
+         background: #DA0037;
+         color: #fff;
+         border: 3px solid #fff;
+
+     }
+
+     select:focus{
+         outline: none;
+     }
+     option{
+         background-color: #fff;
+         color: #000;
+     }
+
+     
+
+   }
+
+   
+     
+
+
+`
