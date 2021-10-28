@@ -6,7 +6,7 @@ export const DivCards = styled.div`
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+  
     align-items: center;
     padding:0px 10px;
     /* border: 1px solid red; */
@@ -112,9 +112,54 @@ export const NavFilter = styled.div`
          color: #000;
      }
 
-     
+     .inputBusca{
+         display: flex;
+         align-items: center;
+         background-color: #fff;
+         padding-right: 10px;
+         border-radius: 50px;
 
-   }
+     }
+
+    
+
+     .inputBusca input{
+         max-width:240px;
+         width: 100%;
+         height: 40px;
+         padding: 20px 5px 20px 20px;
+         font-size: 18px;
+         font-weight: bold;
+         border: none;
+         border-bottom-left-radius: 50px;
+         border-top-left-radius: 50px;
+         
+     }
+
+     .inputBusca input::placeholder{
+        color: #8c8c8c;
+     }
+
+     .inputBusca input:focus{
+         outline: none;
+     }
+
+     .inputBusca svg{
+         width: 25px;
+         height: 25px;
+         color: #8b8b8b;
+     }
+
+     @media (max-width:767px){
+        flex-direction: column-reverse;
+        height: auto;
+        padding: 30px 20px ;
+
+        select{
+         margin-top:30px;
+
+        }
+     }
 
    
      

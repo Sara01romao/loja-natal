@@ -1,18 +1,20 @@
 
-import { useContext, useState } from 'react'
+import { useContext, useState} from 'react'
 import { productsData } from '../../constants/constants'
 import { CartContext } from '../../contexts/cart'
 import { Card, DivCards, NavFilter } from './styled';
+import {MdSearch} from "react-icons/md"
 
 
 export default function Cards(){
     let {count, setCount} = useContext(CartContext);
     let {myCart, setMyCart} = useContext(CartContext);
     let {total, setTotal} = useContext(CartContext);
+    const [busca, setBusca] = useState('');
     const [ordem, setOrdem] = useState('');
     let [lista] = useState([]);
-
-
+    
+    if(busca===''){
     if(ordem === '1' || ordem === ''){
         lista =productsData.sort((a, b) => a.id -  b.id );
       
@@ -30,6 +32,18 @@ export default function Cards(){
         console.log(lista)
 
     }
+    }else{
+        const lowerBusca = busca.toLowerCase();
+        lista = productsData.filter((p) => p.name.toLowerCase().includes(lowerBusca));
+        
+    }
+    
+
+    // lista = useMemo(() =>{
+    //     const lowerBusca = busca.toLowerCase();
+       
+    //     return productsData.filter((p) => p.name.toLowerCase().includes(lowerBusca));
+    // }, [busca]) 
 
 
     function addCart(produto) {
@@ -74,9 +88,7 @@ export default function Cards(){
     
   
     return(
-        <DivCards>
-           
-           
+        <DivCards style={{justifyContent: lista.length < 3 ? 'space-around' : 'space-between'}}>
 
             <NavFilter>
                 <select  value={ordem} onChange={({ target }) => setOrdem(target.value)}>
@@ -86,7 +98,12 @@ export default function Cards(){
                     <option value="3">Menor preço</option>
                 </select>
 
-                <input type="search" name="" id="" placeholder="Buscar" />
+                <div className="inputBusca">
+                    <input  type="search"  value={busca} id="" placeholder="Buscar" onChange={({ target }) => setBusca(target.value)} />
+                    <MdSearch/>
+                </div>
+                
+                
             </NavFilter>
           
 
