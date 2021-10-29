@@ -1,9 +1,10 @@
 
-import { useContext, useState} from 'react'
-import { productsData } from '../../constants/constants'
-import { CartContext } from '../../contexts/cart'
+import { useContext, useState} from 'react';
+import { productsData } from '../../constants/constants';
+import { CartContext } from '../../contexts/cart';
 import { Card, DivCards, NavFilter } from './styled';
-import {MdSearch} from "react-icons/md"
+import {MdSearch} from "react-icons/md";
+import {  toast } from 'react-toastify';
 
 
 export default function Cards(){
@@ -50,7 +51,7 @@ export default function Cards(){
         pushCart(produto);
         calcTotal();
         calcCount();
-      
+        toast.success("Item adicionado com sucesso");
     }
 
     function pushCart(produto){

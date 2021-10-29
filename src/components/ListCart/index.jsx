@@ -2,6 +2,7 @@
 import { useContext } from "react";
 import { CartContext } from "../../contexts/cart";
 import { ItemCart } from "./styled";
+import {  toast } from 'react-toastify';
 
 export default function ListCart(){
     let {count, setCount} = useContext(CartContext);
@@ -57,6 +58,7 @@ export default function ListCart(){
         setMyCart(myCart)
         calcTotal();
         calcCount();
+        toast.info("Item removido com sucesso")
     
         console.log(newlist);
     }
