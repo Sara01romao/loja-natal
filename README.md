@@ -21,14 +21,15 @@ React Router
 - [x] Configuração básica das rotas 
 - [x] Page Home
 - [x] Componente Header
-- [ ] Componente Footer
-- [ ] Componente cards produto
-- [ ] Page Produto
-- [ ] Filtros de busca
-- [x] Page Carrinho
+- [x] Componente cards produto
+- [x] Filtros de busca
 - [x] Funcionalidade add carrinho/ remove
 - [x] Funcionalidade alterar quantidade
 - [x] Funcionalidade contador carrinho
+- [ ] Componente Footer
+- [ ] Page Carrinho
+
+
 
 
 <br>
