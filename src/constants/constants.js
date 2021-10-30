@@ -2,16 +2,16 @@
 export const productsData =[
     {   
         id:1,
-        name:"3 Enfeites",
+        name:"Enfeites Vermelho",
         price:15.00,
         categorie:"Decoração",
         img:"./img/enfeites.png",
-        type:"uni"
+        type:"3 uni"
       
     },
     {   
         id:2,
-        name:"Árvore",
+        name:"Árvore de Natal",
         price:50.00,
         categorie:"Decoração",
         img:"./img/arvore.png",
@@ -28,11 +28,11 @@ export const productsData =[
     },
     {   
         id:4,
-        name:"3 Enfeites",
-        price:15.00,
+        name:"Enfeites Coloridos",
+        price:20.00,
         categorie:"Decoração",
-        img:"./img/enfeites.png",
-        type:"uni"
+        img:"./img/enfeites2.png",
+        type:"5 uni"
       
     },
    
