@@ -1,6 +1,6 @@
 
-import Cards from '../../components/Cards'
-import { HomeSection } from './styles'
+import Cards from '../../components/Cards';
+import { HomeSection } from './styles';
 
 
 export default function Home(){
@@ -8,6 +8,7 @@ export default function Home(){
         <HomeSection>
             < img  className="imgNatal" src="/img/imgHome.png" alt="" />
             <Cards/>
+           
         </HomeSection>
     )
 }

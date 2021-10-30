@@ -15,8 +15,10 @@ export const CartVazio = styled.div`
     border-radius: 5px;
     
     
+    
     h1{
         font-size: 2.5rem;
+        text-align: center;
     }
 
     a{
@@ -34,6 +36,16 @@ export const CartVazio = styled.div`
     a:hover{
        color: #DA0037;
 
+    }
+
+    @media (max-width:768px){
+        height: 250px;
+        margin-bottom: 10px;
+
+        h1{
+            font-size: 1.5rem;
+            text-align: center;
+        }
     }
 
   
