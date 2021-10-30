@@ -10,7 +10,10 @@ export const CartVazio = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: 1px solid red;
+    background-color: #ffff;
+    border: 3px solid #a1a1a1;
+    border-radius: 5px;
+    
     
     h1{
         font-size: 2.5rem;
@@ -20,7 +23,7 @@ export const CartVazio = styled.div`
         
         text-decoration: none;
         margin-top: 30px;
-        font-size: 25px;
+        font-size: 20px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -43,17 +46,17 @@ export const ItemCart = styled.div`
     align-items: center;
     justify-content: space-between;
     background-color: #ffff;
-    border-radius: 10px;
-    border-bottom: 5px solid red;
+    border: 3px solid #a1a1a1;
+    border-radius: 5px;
     margin-bottom: 40px;
 
    
     img{
-    border: 1px solid black;
     max-width: 200px;
     width: 100%;
     height: 200px;
     object-fit: contain;
+    background-color: #f3f3f3 ;
 
     }
 
@@ -84,12 +87,17 @@ export const ItemCart = styled.div`
         cursor: pointer;
     }
 
+    .qtdItem button:hover{
+        background-color: #B0002C;
+    }
+
     .qtdItem p{
         width: 45px;
         height: 30px;
         display: flex;
         align-items: center;
         justify-content: center;
+        background-color: #f3f3f3;
        
     }
 
@@ -107,6 +115,7 @@ export const ItemCart = styled.div`
 
     @media (max-width:768px){
         flex-direction: column;
+        padding: 30px 10px;
         
 
         img, .txtCart{
@@ -116,11 +125,14 @@ export const ItemCart = styled.div`
 
         .txtCart{
             text-align: center;
+            margin-top: 10px;
         }
 
         .qtdItem{
             margin-top: 20px;
         }
+
+       
 
         .removebtn{
         
