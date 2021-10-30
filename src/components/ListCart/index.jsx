@@ -1,8 +1,10 @@
-
+import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { CartContext } from "../../contexts/cart";
-import { ItemCart } from "./styled";
+import { ItemCart, CartVazio } from "./styled";
+import { MdShoppingCart, MdKeyboardArrowLeft} from "react-icons/md"
 import {  toast } from 'react-toastify';
+
 
 export default function ListCart(){
     let {count, setCount} = useContext(CartContext);
@@ -66,6 +68,12 @@ export default function ListCart(){
 
     return(
         <div>
+             {myCart.length === 0 && <CartVazio>
+                    <h1> Carrinho vazio <MdShoppingCart/></h1>
+                    <Link to="/"> <MdKeyboardArrowLeft/> Voltar</Link>
+                </CartVazio>
+             }
+
              {myCart.map((p)=>{
                     return(
                         <ItemCart key={p.id}>
@@ -82,7 +90,7 @@ export default function ListCart(){
                                 <button onClick={() => add(p)}>+</button>
                             </div>
 
-                            <button onClick={() =>remove(p)}>Remover</button>
+                            <button className="removebtn" onClick={() =>remove(p)}>Remover</button>
 
                         </ItemCart>
                     )

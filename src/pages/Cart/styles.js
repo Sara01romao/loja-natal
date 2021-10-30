@@ -2,11 +2,17 @@ import styled from "styled-components";
 
 
 export const SectionCart = styled.section`
-    border: 1px solid red;
+    /* border: 1px solid red; */
     max-width: 1220px;
-    margin: 0 auto;
+    margin: 50px auto;
     display: flex;
-    flex-wrap: wrap;
+    padding-top: 50px;
+
+    @media (max-width: 768px){
+        flex-direction: column;
+        align-items: center;
+        
+    }
 
     .listCart{
         max-width: 70% ;
