@@ -19,6 +19,10 @@ export const SectionCart = styled.section`
         width: 100%;
     }
     
+    .total{
+        max-width: 30%;
+        width:100%
+    }
 
    
 

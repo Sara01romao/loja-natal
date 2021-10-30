@@ -1,5 +1,6 @@
 
 import ListCart from "../../components/ListCart";
+import Total from "../../components/Total";
 import { SectionCart } from "./styles";
 
 export default function Cart(){
@@ -11,8 +12,8 @@ export default function Cart(){
             </div>
            
 
-            <div>
-                total
+            <div className="total">
+                <Total/>
             </div>
         </SectionCart>
     )
