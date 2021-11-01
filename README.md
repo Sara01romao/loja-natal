@@ -12,6 +12,12 @@
 
 ## 💻  Sobre o Projeto
 Projeto tem como tema um catálogo de compra de produtos natalinos, sendo usado Context Api nas funcionalidades do carrinho de compra. Dessa forma ficou mais simples as alteração dos estados em comuns entre os componentes.
+<br>
+
+
+   [![Deploy with Vercel](https://vercel.com/button)](https://lojanatal.netlify.app/)
+ 
+
   
 <br>
 
