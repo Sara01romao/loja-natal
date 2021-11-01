@@ -1,7 +1,17 @@
+<h1 align="center"> :christmas_tree: LOJA - natal :christmas_tree:</h1>
+
+
+ 
+ <h6 > View - catálogo</h6>
+
+<p align="center" >
+  <img max-width="auto" height="auto"  src="https://user-images.githubusercontent.com/46323667/139681153-35d81e43-40d2-42c6-a678-70c165474764.png">
+  
+</p>
+
 
 ## 💻  Sobre o Projeto
 Projeto tem como tema um catálogo de compra de produtos natalinos, sendo usado Context Api nas funcionalidades do carrinho de compra. Dessa forma ficou mais simples as alteração dos estados em comuns entre os componentes.
-
   
 <br>
 
@@ -11,6 +21,8 @@ Front-end
 Figma
 React JS 
 React Router 
+React Icons
+Toastify
 ```
 
 
@@ -26,8 +38,8 @@ React Router
 - [x] Funcionalidade add carrinho/ remove
 - [x] Funcionalidade alterar quantidade
 - [x] Funcionalidade contador carrinho
-- [ ] Componente Footer
-- [ ] Page Carrinho
+- [x] Componente Footer
+- [x] Page Carrinho
 
 
 
@@ -35,13 +47,7 @@ React Router
 <br>
 <br>
  
-  <h6 align="center">   view</h6>
-
-
-<p align="center">
-  <img max-width="auto" height="auto"  src="https://user-images.githubusercontent.com/46323667/138488843-f02e681d-b69a-43a7-8731-f2937431bed2.png">
-</p>
-
+ 
 
 
 
