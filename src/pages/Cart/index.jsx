@@ -8,13 +8,15 @@ export default function Cart(){
     return(
         
         <SectionCart>
-            
-            <div className="listCart">
-            <ListCart/>
-            </div>
-    
-            <div className="total">
-                <Total/>
+            <h1>Meu Carrinho</h1>
+            <div className="containerList">
+                <div className="listCart">
+                    <ListCart/>
+                </div>
+        
+                <div className="total">
+                    <Total/>
+                </div>
             </div>
         </SectionCart>
        

@@ -5,9 +5,17 @@ export const SectionCart = styled.section`
     max-width: 1220px;
     height: auto;
     margin: 50px auto 0px;
-    display: flex;
-    padding: 50px 20px;
     
+    h1{
+        text-align: center;
+        font-size: 2rem;
+       
+    }
+    
+    .containerList{
+        display: flex;
+        padding: 50px 20px;
+    }
       
 
     .listCart{
@@ -23,8 +31,13 @@ export const SectionCart = styled.section`
     }
 
     @media (max-width: 768px){
-        flex-direction: column;
-        align-items: center;
+       
+
+        .containerList{
+            flex-direction: column;
+            align-items: center;
+        }
+      
          
 
         .listCart{
