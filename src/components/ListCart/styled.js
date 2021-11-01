@@ -11,7 +11,7 @@ export const CartVazio = styled.div`
     justify-content: center;
     align-items: center;
     background-color: #ffff;
-    border: 3px solid #a1a1a1;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     border-radius: 5px;
     
     
@@ -22,8 +22,7 @@ export const CartVazio = styled.div`
     }
 
     a{
-        
-        text-decoration: none;
+        color: #DA0037;
         margin-top: 30px;
         font-size: 20px;
         display: flex;
@@ -34,7 +33,7 @@ export const CartVazio = styled.div`
     }
 
     a:hover{
-       color: #DA0037;
+       color: #000;
 
     }
 
@@ -58,10 +57,12 @@ export const ItemCart = styled.div`
     align-items: center;
     justify-content: space-between;
     background-color: #ffff;
-    border: 3px solid #a1a1a1;
     border-radius: 5px;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 
+    
    
     img{
     max-width: 200px;
@@ -78,6 +79,7 @@ export const ItemCart = styled.div`
         display: flex;
         flex-direction: column;
         justify-content: center;
+        align-items: center;
     }
 
     .qtdItem{
@@ -133,11 +135,12 @@ export const ItemCart = styled.div`
         img, .txtCart{
        
             max-width: 80%;
+            margin-top: 10px;
         }
 
         .txtCart{
             text-align: center;
-            margin-top: 10px;
+           
         }
 
         .qtdItem{

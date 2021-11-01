@@ -5,7 +5,6 @@ export const SectionCart = styled.section`
     max-width: 1220px;
     height: auto;
     margin: 50px auto 0px;
-    background-color: blue;
     display: flex;
     padding: 50px 20px;
     

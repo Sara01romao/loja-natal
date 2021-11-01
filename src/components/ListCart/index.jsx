@@ -74,27 +74,33 @@ export default function ListCart(){
                 </CartVazio>
              }
 
-             {myCart.map((p)=>{
-                    return(
-                        <ItemCart key={p.id}>
-                            <img src={p.img} alt={p.name} />
+            {myCart.length !== 0 &&  <div>
+                <h1>Meu carrinho</h1>
 
-                            <div className="txtCart">
-                                <h3>{p.name}</h3>
-                                <p>R$ {p.price.toFixed(2)} <small>{p.type}</small></p>
-                            </div>
+                    {myCart.map((p)=>{
+                            return(
+                                <ItemCart key={p.id}>
+                                    <img src={p.img} alt={p.name} />
 
-                            <div className="qtdItem">
-                                <button onClick={() => removeQtd(p)}>-</button>
-                                <p>{p.qtd}</p>
-                                <button onClick={() => add(p)}>+</button>
-                            </div>
+                                    <div className="txtCart">
+                                        <h3>{p.name}</h3>
+                                        <p>R$ {p.price.toFixed(2)} <small>{p.type}</small></p>
+                                    </div>
 
-                            <button className="removebtn" onClick={() =>remove(p)}>Remover</button>
+                                    <div className="qtdItem">
+                                        <button onClick={() => removeQtd(p)}>-</button>
+                                        <p>{p.qtd}</p>
+                                        <button onClick={() => add(p)}>+</button>
+                                    </div>
 
-                        </ItemCart>
-                    )
-                })}
+                                    <button className="removebtn" onClick={() =>remove(p)}>Remover</button>
+
+                                </ItemCart>
+                            )
+                        })}
+
+                </div>
+            }
         </div>
     )
 }

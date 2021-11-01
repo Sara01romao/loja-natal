@@ -8,6 +8,7 @@ export default function Cart(){
     return(
         
         <SectionCart>
+            
             <div className="listCart">
             <ListCart/>
             </div>
