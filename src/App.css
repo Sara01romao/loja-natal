@@ -8,12 +8,19 @@
 
 body{
   font-family: 'Roboto', sans-serif;
-  background-color: #FAFAFA;
+  
   
 }
 .App{
-  background-color: pink;
+  background-color: rgba(253, 222, 227, 0.534);
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh + 50px);
  
+}
+
+.bodyApp{
+  flex:1;
 }
 
 

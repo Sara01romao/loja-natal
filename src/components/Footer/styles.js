@@ -13,6 +13,7 @@ export const DivFooter = styled.footer`
     .footerContainer{
         max-width: 1220px;
         margin: 0 auto;
+        height: auto;
     }
 
     .footerContainer div{
