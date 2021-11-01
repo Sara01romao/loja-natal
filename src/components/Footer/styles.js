@@ -31,7 +31,7 @@ export const DivFooter = styled.footer`
     }
 
     .footerContainer div svg:hover{
-        fill: #DA0037;
+        fill: #FFB7C9;
         transition: 0.2s;
         
     }

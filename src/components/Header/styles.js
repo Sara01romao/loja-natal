@@ -39,7 +39,9 @@ export const DivHeader= styled.header`
     }
 
     a:hover{
-        opacity: 0.9;
+       
+        color: #FFB7C9;
+        transition: 0.2s;
     }
 
     a svg{
