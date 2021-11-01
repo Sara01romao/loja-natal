@@ -39,6 +39,8 @@ export const DivFooter = styled.footer`
     p{
       text-align: center ;
       color: #a0a0a0;
+      font-size: 14px;
+      margin-bottom: 20px
     }
 
 `

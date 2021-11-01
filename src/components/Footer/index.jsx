@@ -12,7 +12,7 @@ export default function Footer() {
                 </div>
                
             </div>
-            {/* <p>Observação: site apenas para estudo prático de Front-end</p> */}
+            <p>Observação: site apenas para estudo prático de Front-end</p>
             
         </DivFooter>
     )
